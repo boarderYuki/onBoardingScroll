@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="onBoarding" id="BYZ-38-t0r" customClass="ViewController" customModule="onBoardingScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yws-5h-nB0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IQB-eP-mxY"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ic-0F-wVw">
+                                <rect key="frame" x="138" y="540" width="99" height="30"/>
+                                <state key="normal" title="GET STARTED"/>
+                                <connections>
+                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKd-Ed-YXq"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Dnz-Hm-LHV">
+                                <rect key="frame" x="147.5" y="620" width="80" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="eua-qd-dtf"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.333984375" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.92455607650000005" green="0.74699449539999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dnz-Hm-LHV" firstAttribute="top" secondItem="9Ic-0F-wVw" secondAttribute="bottom" constant="50" id="Fi2-zf-TD8"/>
+                            <constraint firstItem="Dnz-Hm-LHV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IY6-07-ZYv"/>
+                            <constraint firstItem="yws-5h-nB0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ktb-kV-wCY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yws-5h-nB0" secondAttribute="bottom" id="LLK-BI-sf2"/>
+                            <constraint firstAttribute="trailing" secondItem="yws-5h-nB0" secondAttribute="trailing" id="N6B-oQ-8q2"/>
+                            <constraint firstItem="yws-5h-nB0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kjG-YU-kw3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dnz-Hm-LHV" secondAttribute="bottom" constant="10" id="teD-pc-O8q"/>
+                            <constraint firstItem="9Ic-0F-wVw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u3q-CR-hRB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="Dnz-Hm-LHV" id="Ljs-2e-2b9"/>
+                        <outlet property="scrollView" destination="yws-5h-nB0" id="brO-ba-KUO"/>
+                        <outlet property="startButton" destination="9Ic-0F-wVw" id="CIT-SG-u0j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FsA-Om-8da">
+            <objects>
+                <viewController storyboardIdentifier="getStarted" id="yso-de-S63" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a5z-Yy-EkI"/>
+                        <viewControllerLayoutGuide type="bottom" id="fec-bl-9VD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sf1-Il-14p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="757-Qa-ItH">
+                                <rect key="frame" x="166" y="232" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92455607650000005" green="0.74699449539999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkH-bL-czC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="152"/>
+        </scene>
+    </scenes>
+</document>
